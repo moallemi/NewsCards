@@ -9,7 +9,7 @@ ext {
             coreKtx         : "1.0.1",
             constraintLayout: "2.0.0-alpha4",
             room            : "2.0.0",
-            okHttp          : "3.12.1",
+            okHttp          : "3.12.2",
             rxJava          : "2.2.8",
             rxAndroid       : "2.1.1",
             dagger          : "2.19",
