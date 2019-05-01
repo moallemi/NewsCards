@@ -1,23 +1,22 @@
-package me.moallemi.newscards.remote.model
+package me.moallemi.newscards.data.entity
 
-data class ArticlesResponse(
-    val status: String,
+data class ArticlesResultEntity(
     val totalResults: Int,
-    val articles: List<Article>
+    val articles: List<ArticleEntity>
 )
 
-data class Article(
+data class ArticleEntity(
     val author: String?,
     val content: String?,
     val description: String?,
     val publishedAt: String,
-    val source: Source,
+    val source: SourceEntity,
     val title: String,
     val url: String,
     val urlToImage: String?
 )
 
-data class Source(
+data class SourceEntity(
     val id: String?,
     val name: String
 )

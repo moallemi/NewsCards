@@ -1,4 +1,4 @@
-package me.moallemi.newscards.remote.model
+package me.moallemi.newscards.remote.dto
 
 sealed class Error(override val message: String) : Throwable(message) {
     data class NetworkConnection(override val message: String, val throwable: Throwable) : Error(message)

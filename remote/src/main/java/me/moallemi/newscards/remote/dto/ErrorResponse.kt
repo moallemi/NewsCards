@@ -1,4 +1,4 @@
-package me.moallemi.newscards.remote.model
+package me.moallemi.newscards.remote.dto
 
 data class ErrorResponse(
     val code: String,

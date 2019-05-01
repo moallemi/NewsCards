@@ -9,8 +9,8 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.exceptions.CompositeException
 import io.reactivex.exceptions.Exceptions
 import io.reactivex.plugins.RxJavaPlugins
-import me.moallemi.newscards.remote.model.Error
-import me.moallemi.newscards.remote.model.ErrorResponse
+import me.moallemi.newscards.remote.dto.Error
+import me.moallemi.newscards.remote.dto.ErrorResponse
 import retrofit2.Call
 import retrofit2.HttpException
 import retrofit2.Response
