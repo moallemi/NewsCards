@@ -1,4 +1,4 @@
-package me.moallemi.newscards.domain.model
+package me.moallemi.newscards.data.entity
 
 data class ArticlesResult(
     val totalResults: Int,

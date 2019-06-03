@@ -1,8 +1,8 @@
 package me.moallemi.newscards.data.datasource
 
-import io.reactivex.Single
 import me.moallemi.newscards.data.entity.ArticlesResultEntity
+import me.moallemi.newscards.data.entity.Either
 
 interface ArticleRemoteDataSource {
-    fun getTopHeadlines(): Single<ArticlesResultEntity>
+    suspend fun getTopHeadlines(): Either<ArticlesResultEntity>
 }

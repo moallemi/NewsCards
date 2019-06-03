@@ -1,14 +1,14 @@
 package me.moallemi.newscards.data.repository
 
-import io.reactivex.Single
 import me.moallemi.newscards.data.datasource.ArticleRemoteDataSource
+import me.moallemi.newscards.data.entity.ArticlesResult
+import me.moallemi.newscards.data.entity.Either
+import me.moallemi.newscards.data.entity.map
 import me.moallemi.newscards.data.entity.toArticlesResult
-import me.moallemi.newscards.domain.model.ArticlesResult
-import me.moallemi.newscards.domain.repository.ArticleRepository
 
-class ArticleRepositoryImpl(private val articleRemoteDataSource: ArticleRemoteDataSource) : ArticleRepository {
+class ArticleRepository(private val articleRemoteDataSource: ArticleRemoteDataSource) {
 
-    override fun getTopHeadlines(): Single<ArticlesResult> {
+    suspend fun getTopHeadlines(): Either<ArticlesResult> {
         return articleRemoteDataSource.getTopHeadlines()
             .map { articlesResultEntity -> articlesResultEntity.toArticlesResult() }
     }

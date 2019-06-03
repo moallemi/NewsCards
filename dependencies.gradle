@@ -6,13 +6,13 @@ ext {
     ]
     libraries = [
             androidX        : "1.0.2",
+            coroutines      : "1.2.1",
             coreKtx         : "1.0.1",
             constraintLayout: "2.0.0-beta1",
             room            : "2.0.0",
             okHttp          : "3.12.2",
-            rxJava          : "2.2.8",
             rxAndroid       : "2.1.1",
-            dagger          : "2.19",
+            dagger          : "2.23.1",
             lifecycle       : "2.0.0",
             materialDesign  : "1.0.0",
             navigation      : "2.0.0",

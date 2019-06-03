@@ -1,6 +1,6 @@
 package me.moallemi.newscards.remote.dto
 
-data class ErrorResponse(
+class ErrorResponseDto(
     val code: String,
     val message: String,
     val status: String
