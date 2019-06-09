@@ -76,7 +76,7 @@ suspend fun <T, R> Call<T>.syncEither(map: (T) -> R): Either<R> = suspendCancell
 
 private fun createHttpError(throwable: HttpException): Error {
     val response = throwable.response()
-    return if (response.errorBody() == null) {
+    return if (response?.errorBody() == null) {
         Server(IllegalStateException("response.errorBody() is null"))
     } else {
         try {
