@@ -25,7 +25,10 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 
     implementation "androidx.appcompat:appcompat:$libraries.androidX"
+    implementation "androidx.core:core-ktx:$libraries.coreKtx"
+    implementation "com.google.android.material:material:$libraries.materialDesign"
     implementation "androidx.constraintlayout:constraintlayout:$libraries.constraintLayout"
+    implementation "androidx.lifecycle:lifecycle-extensions:$libraries.lifecycle"
 
     testImplementation "junit:junit:$testLibraries.junit"
     androidTestImplementation "androidx.test:runner:$testLibraries.androidXTestRunner"
