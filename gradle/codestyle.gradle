@@ -1,0 +1,18 @@
+subprojects { project ->
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
+
+    ktlint {
+        debug = false
+        verbose = false
+        android = true
+        outputToConsole = true
+        ignoreFailures = false
+    }
+    project.afterEvaluate {
+        if (project.plugins.hasPlugin("com.android.application") || project.plugins.hasPlugin("com.android.library")) {
+            project.tasks.findByName("preBuild")?.dependsOn("ktlintCheck")
+        } else if (project.plugins.hasPlugin("kotlin")) {
+            project.tasks.findByName("compileKotlin").dependsOn("ktlintCheck")
+        }
+    }
+}
