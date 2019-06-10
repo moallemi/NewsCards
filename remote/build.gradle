@@ -7,8 +7,8 @@ dependencies {
 
     implementation project(':data')
 
-    implementation "com.squareup.retrofit2:retrofit:$libraries.retrofit"
-    implementation "com.squareup.retrofit2:converter-gson:$libraries.retrofit"
-    implementation "com.squareup.okhttp3:logging-interceptor:$libraries.okHttp"
-    implementation "com.google.code.gson:gson:$libraries.gson"
+    api "com.squareup.retrofit2:retrofit:$libraries.retrofit"
+    api "com.squareup.retrofit2:converter-gson:$libraries.retrofit"
+    api "com.squareup.okhttp3:logging-interceptor:$libraries.okHttp"
+    api "com.google.code.gson:gson:$libraries.gson"
 }

@@ -12,6 +12,8 @@ android {
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "API_KEY", "\"${news_cards_news_api_key}\"")
     }
     buildTypes {
         release {
@@ -24,6 +26,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    implementation project(':data')
+    implementation project(':remote')
 
     implementation "androidx.appcompat:appcompat:$libraries.androidX"
     implementation "androidx.core:core-ktx:$libraries.coreKtx"
