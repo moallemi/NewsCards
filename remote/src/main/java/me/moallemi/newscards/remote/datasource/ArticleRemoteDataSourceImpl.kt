@@ -6,8 +6,11 @@ import me.moallemi.newscards.data.entity.Either
 import me.moallemi.newscards.remote.api.NewsApiService
 import me.moallemi.newscards.remote.dto.toArticlesResultEntity
 import me.moallemi.newscards.remote.extension.awaitEither
+import javax.inject.Inject
 
-class ArticleRemoteDataSourceImpl(private val newsApiService: NewsApiService) : ArticleRemoteDataSource {
+class ArticleRemoteDataSourceImpl @Inject constructor(
+    private val newsApiService: NewsApiService
+) : ArticleRemoteDataSource {
 
     override suspend fun getTopHeadlines(): Either<ArticlesResultEntity> {
         return newsApiService.getTopHeadlines().awaitEither { articlesResultDto ->

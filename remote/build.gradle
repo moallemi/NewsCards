@@ -11,4 +11,6 @@ dependencies {
     api "com.squareup.retrofit2:converter-gson:$libraries.retrofit"
     api "com.squareup.okhttp3:logging-interceptor:$libraries.okHttp"
     api "com.google.code.gson:gson:$libraries.gson"
+
+    implementation "javax.inject:javax.inject:$libraries.javax_inject"
 }

@@ -5,7 +5,9 @@ ext {
             targetSdkVersion : 28
     ]
     libraries = [
-            androidX        : "1.0.2",
+            appCompat       : "1.1.0-beta01",
+            activity        : "1.0.0-beta01",
+            fragment        : "1.1.0-beta01",
             coroutines      : "1.2.1",
             coreKtx         : "1.0.2",
             constraintLayout: "2.0.0-beta1",

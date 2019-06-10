@@ -30,10 +30,13 @@ dependencies {
     implementation project(':data')
     implementation project(':remote')
 
-    implementation "androidx.appcompat:appcompat:$libraries.androidX"
+    implementation "androidx.appcompat:appcompat:$libraries.appCompat"
     implementation "androidx.core:core-ktx:$libraries.coreKtx"
     implementation "com.google.android.material:material:$libraries.materialDesign"
     implementation "androidx.constraintlayout:constraintlayout:$libraries.constraintLayout"
+
+    implementation "androidx.activity:activity-ktx:$libraries.activity"
+    implementation "androidx.fragment:fragment-ktx:$libraries.fragment"
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$libraries.lifecycle"
     implementation "androidx.lifecycle:lifecycle-extensions:$libraries.lifecycle"
