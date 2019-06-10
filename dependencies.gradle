@@ -13,7 +13,7 @@ ext {
             okHttp          : "3.12.2",
             rxAndroid       : "2.1.1",
             dagger          : "2.23.1",
-            lifecycle       : "2.0.0",
+            lifecycle       : "2.1.0-beta01",
             materialDesign  : "1.0.0",
             navigation      : "2.0.0",
             gson            : "2.8.5",

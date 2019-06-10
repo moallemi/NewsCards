@@ -28,6 +28,8 @@ dependencies {
     implementation "androidx.core:core-ktx:$libraries.coreKtx"
     implementation "com.google.android.material:material:$libraries.materialDesign"
     implementation "androidx.constraintlayout:constraintlayout:$libraries.constraintLayout"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$libraries.lifecycle"
     implementation "androidx.lifecycle:lifecycle-extensions:$libraries.lifecycle"
 
     testImplementation "junit:junit:$testLibraries.junit"
