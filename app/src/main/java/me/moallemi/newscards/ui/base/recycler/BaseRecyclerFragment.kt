@@ -38,8 +38,7 @@ abstract class BaseRecyclerFragment<T : RecyclerData, Params, VM : BaseRecyclerV
     private var isLoadingMore = false
     protected open var isEndless = true
 
-    protected lateinit var viewModel: VM
-    protected abstract fun makeViewModel(): VM
+    protected abstract val viewModel: VM
     protected abstract fun getParams(): Params
 
     protected abstract val adapter: BaseRecyclerAdapter<T>
@@ -65,7 +64,7 @@ abstract class BaseRecyclerFragment<T : RecyclerData, Params, VM : BaseRecyclerV
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        viewModel = makeViewModel().apply {
+        viewModel.apply {
             observe(items, ::handleResourceState)
         }
 
