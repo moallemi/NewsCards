@@ -3,7 +3,7 @@ package me.moallemi.newscards.ui.base.recycler
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import me.moallemi.newscards.R
+import me.moallemi.newscards.databinding.ItemLoadMoreBinding
 import me.moallemi.newscards.model.RecyclerData
 import me.moallemi.newscards.ui.base.listener.OnRecyclerItemClickListener
 import me.moallemi.newscards.ui.base.listener.TryAgainClickListener
@@ -23,7 +23,7 @@ abstract class BaseRecyclerAdapter<T : RecyclerData> : RecyclerView.Adapter<Base
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseRecyclerViewHolder<T> {
         return when (viewType) {
             MoreItem.VIEW_TYPE -> {
-                val view = LayoutInflater.from(parent.context).inflate(R.layout.item_load_more, parent, false)
+                val view = ItemLoadMoreBinding.inflate(LayoutInflater.from(parent.context), parent, false)
                 MoreViewHolder(view, tryAgainListener) as BaseRecyclerViewHolder<T>
             }
             else -> {
