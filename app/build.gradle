@@ -49,6 +49,10 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$libraries.dagger"
     kapt "com.google.dagger:dagger-android-processor:$libraries.dagger"
 
+    implementation "com.github.bumptech.glide:glide:$libraries.glide"
+    kapt "com.github.bumptech.glide:compiler:$libraries.glide"
+    implementation("com.github.bumptech.glide:okhttp3-integration:$libraries.glide") { exclude group: 'glide-parent' }
+
     testImplementation "junit:junit:$testLibraries.junit"
     androidTestImplementation "androidx.test:runner:$testLibraries.androidXTestRunner"
     androidTestImplementation "androidx.test.espresso:espresso-core:$testLibraries.espresso"

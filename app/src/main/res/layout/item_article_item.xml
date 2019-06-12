@@ -17,21 +17,28 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="@{() -> itemClickListener.onItemClick(itemData)}">
+        android:background="?selectableItemBackground"
+        android:onClick="@{() -> itemClickListener.onItemClick(itemData)}"
+        android:padding="@dimen/default_padding">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            app:imageUrl="@{itemData.urlToImage}"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeHolder="@{@drawable/bg_image_round}"
+            app:roundedCorner="@{@dimen/image_rounded_corner}"
+            tools:src="@drawable/bg_image_round" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/source"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_half"
             android:text="@{itemData.source.name}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image"
@@ -41,7 +48,10 @@
             android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_half"
             android:text="@{itemData.title}"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/source"

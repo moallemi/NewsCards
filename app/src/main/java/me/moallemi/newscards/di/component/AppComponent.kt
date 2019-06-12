@@ -9,6 +9,7 @@ import me.moallemi.newscards.di.module.HeadlinesModule
 import me.moallemi.newscards.di.module.NetworkModule
 import me.moallemi.newscards.di.module.ViewModelFactoryModule
 import me.moallemi.newscards.di.scope.AppScope
+import okhttp3.OkHttpClient
 
 @Component(
     modules = [
@@ -24,4 +25,6 @@ interface AppComponent : AndroidInjector<NewsCardsApp> {
 
     @Component.Factory
     abstract class Factory : AndroidInjector.Factory<NewsCardsApp>
+
+    fun getOkHttp(): OkHttpClient
 }
