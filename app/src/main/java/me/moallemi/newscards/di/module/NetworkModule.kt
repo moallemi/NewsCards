@@ -1,11 +1,11 @@
 package me.moallemi.newscards.di.module
 
 import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import me.moallemi.newscards.BuildConfig
 import me.moallemi.newscards.remote.api.NewsApiService
+import me.moallemi.newscards.remote.extension.JSON
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -48,9 +48,7 @@ class NetworkModule {
     }
 
     @Provides
-    fun provideGson(): Gson {
-        return GsonBuilder().create()
-    }
+    fun provideGson(): Gson = JSON.gson
 
     @Provides
     fun provideGsonConverterFactory(gson: Gson): GsonConverterFactory {
