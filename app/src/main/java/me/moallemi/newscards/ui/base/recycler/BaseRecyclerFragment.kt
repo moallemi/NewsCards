@@ -26,7 +26,8 @@ import me.moallemi.newscards.ui.base.recycler.loadmore.State
 import java.io.IOException
 import java.net.UnknownHostException
 
-abstract class BaseRecyclerFragment<T : RecyclerData, Params, VM : BaseRecyclerViewModel<T, Params>> : BaseFragment() {
+abstract class BaseRecyclerFragment<T : RecyclerData, Params, VM : BaseRecyclerViewModel<T, Params>> :
+    BaseFragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var loading: ProgressBar
@@ -57,7 +58,11 @@ abstract class BaseRecyclerFragment<T : RecyclerData, Params, VM : BaseRecyclerV
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(layoutId, container, false)
     }
 
@@ -74,10 +79,14 @@ abstract class BaseRecyclerFragment<T : RecyclerData, Params, VM : BaseRecyclerV
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = view.findViewById(R.id.recyclerView) ?: throw RuntimeException("RecyclerView must not be null")
-        loading = view.findViewById(R.id.loading) ?: throw RuntimeException("Loading must not be null")
-        emptyView = view.findViewById(R.id.emptyView) ?: throw RuntimeException("emptyView must not be null")
-        errorView = view.findViewById(R.id.errorView) ?: throw RuntimeException("errorView must not be null")
+        recyclerView = view.findViewById(R.id.recyclerView)
+            ?: throw RuntimeException("RecyclerView must not be null")
+        loading =
+            view.findViewById(R.id.loading) ?: throw RuntimeException("Loading must not be null")
+        emptyView = view.findViewById(R.id.emptyView)
+            ?: throw RuntimeException("emptyView must not be null")
+        errorView = view.findViewById(R.id.errorView)
+            ?: throw RuntimeException("errorView must not be null")
 
         layoutManager = LinearLayoutManager(requireContext())
         with(adapter) {
@@ -89,12 +98,14 @@ abstract class BaseRecyclerFragment<T : RecyclerData, Params, VM : BaseRecyclerV
             adapter = this@BaseRecyclerFragment.adapter
             layoutManager = this@BaseRecyclerFragment.layoutManager
 
-            addOnScrollListener(object : RecyclerView.OnScrollListener() {
-                override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                    super.onScrolled(recyclerView, dx, dy)
-                    processOnMore()
+            addOnScrollListener(
+                object : RecyclerView.OnScrollListener() {
+                    override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                        super.onScrolled(recyclerView, dx, dy)
+                        processOnMore()
+                    }
                 }
-            })
+            )
         }
     }
 

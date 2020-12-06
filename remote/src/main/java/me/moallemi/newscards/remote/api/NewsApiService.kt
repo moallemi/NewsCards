@@ -1,3 +1,4 @@
+
 package me.moallemi.newscards.remote.api
 
 import me.moallemi.newscards.remote.dto.ArticlesResultDto

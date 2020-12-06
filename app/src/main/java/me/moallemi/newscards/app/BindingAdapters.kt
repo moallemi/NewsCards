@@ -17,7 +17,9 @@ fun bindImageFromUrl(
 ) {
     if (!imageUrl.isNullOrEmpty()) {
         imageView.load(
-            imageUrl, placeHolder, roundedCorner?.toInt() ?: 0
+            imageUrl,
+            placeHolder,
+            roundedCorner?.toInt() ?: 0
         )
     }
 }
