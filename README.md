@@ -24,7 +24,7 @@ There are two Gradle tasks for testing the project:
 
 Screenshots
 -----------
-
+![screenshot](https://github.com/moeindev/NewsCards/blob/update-project/screens/sc.jpg)
 
 Android development
 --------------
@@ -74,22 +74,6 @@ Development setup
 For development, the latest version of Android Studio 3.4 is required. The latest version can be
 downloaded from [here](https://developer.android.com/studio/).
 
-### Code style
-
-News Cards uses [ktlint](https://ktlint.github.io/) to enforce Kotlin coding styles.
-Here's how to configure it for use with Android Studio (instructions adapted
-from the ktlint [README](https://github.com/shyiko/ktlint/blob/master/README.md)):
-
-- Close Android Studio if it's open
-
-- Download ktlint using these [installation instructions](https://github.com/shyiko/ktlint/blob/master/README.md#installation)
-
-- Inside the project root directory run:
-
-  `./ktlint --apply-to-idea-project --android`
-
-- Start Android Studio
-
 ### API keys
 
 You need to supply API / client keys for the various services the
@@ -103,8 +87,6 @@ When you obtain the keys, you can provide them to the app by putting the followi
 # Get this from News Api
 news_cards_news_api_key=<insert>
 
-# Get this from Fabric/Crashlytics
-news_cards_fabric_api_key=<insert>
 ```
 
 On Linux/Mac that file is typically found at `~/.gradle/gradle.properties` or in the project directory `NewsCards/gradle.properties`

@@ -20,8 +20,10 @@ class HeadlinesViewModel @Inject constructor(private val repository: ArticleRepo
     }
 
     private fun success(result: ArticlesResult) {
-        handleSuccess(result.articles.map { article ->
-            article.toArticleItem()
-        })
+        handleSuccess(
+            result.articles.map { article ->
+                article.toArticleItem()
+            }
+        )
     }
 }
