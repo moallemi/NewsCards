@@ -4,10 +4,7 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import me.moallemi.newscards.app.NewsCardsApp
-import me.moallemi.newscards.di.module.AppModule
-import me.moallemi.newscards.di.module.HeadlinesModule
-import me.moallemi.newscards.di.module.NetworkModule
-import me.moallemi.newscards.di.module.ViewModelFactoryModule
+import me.moallemi.newscards.di.module.*
 import me.moallemi.newscards.di.scope.AppScope
 import okhttp3.OkHttpClient
 
@@ -15,6 +12,7 @@ import okhttp3.OkHttpClient
     modules = [
         AndroidInjectionModule::class,
         AppModule::class,
+        MainModule::class,
         ViewModelFactoryModule::class,
         NetworkModule::class,
         HeadlinesModule::class

@@ -30,6 +30,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/source"
             app:placeHolder="@{@drawable/bg_image_round}"
             app:roundedCorner="@{@dimen/image_rounded_corner}"
             tools:src="@drawable/bg_image_round" />
@@ -38,10 +39,12 @@
             android:id="@+id/source"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            style="@style/Theme.Item.Source"
             android:layout_marginTop="@dimen/default_margin_half"
             android:text="@{itemData.source.name}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image"
+            app:layout_constraintBottom_toTopOf="@id/title"
             tools:text="Crypto Coins News" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -50,11 +53,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_half"
             android:text="@{itemData.title}"
-            android:textColor="@color/black"
-            android:textSize="18sp"
+            style="@style/Theme.Item.HeadLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/source"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:text="Facebook’s Cryptocurrency Will Pay Interest to Users, Predicts Blockchain Regulator" />
 
 
