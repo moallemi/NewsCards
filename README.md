@@ -24,7 +24,11 @@ There are two Gradle tasks for testing the project:
 
 Screenshots
 -----------
-![screenshot](https://github.com/moeindev/NewsCards/blob/update-project/screens/sc.jpg)
+
+Light | Dark
+----- | ----
+![Light](https://github.com/moeindev/NewsCards/blob/enhance-ui/screens/light.jpg) | ![Dark](https://github.com/moeindev/NewsCards/blob/enhance-ui/screens/dark.jpg)
+
 
 Android development
 --------------
@@ -77,8 +81,7 @@ downloaded from [here](https://developer.android.com/studio/).
 ### API keys
 
 You need to supply API / client keys for the various services the
-app uses. That is currently [News Api](https://newsapi.org/) and [Fabric](https://fabric.io) (for Crashlytics). You can find information about
-how to gain access via the relevant links.
+app uses. That is currently [News Api](https://newsapi.org/). You can find information about how to gain access via the relevant link.
 
 When you obtain the keys, you can provide them to the app by putting the following in the
 `gradle.properties` file in your user home:
@@ -98,5 +101,17 @@ If you've found an error in this sample, please file an issue.
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request. Since this project is still in its very early stages,
 if your change is substantial, please raise an issue first to discuss it.
+
+
+### TODO:
+
+- [*] update project dependencies
+- [*] add dark theme support
+- [*] use custom fonts
+- [ ] add news detail page
+- [ ] provide better caching mechanism
+- [ ] prevent reloading after changing UI mode
+- [ ] provide Release APK
+- [ ] search news
 
 
