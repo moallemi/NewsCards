@@ -1,18 +1,5 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorControlActivated">?colorPrimary</item>
-        <item name="toolbarStyle">@style/Widget.Toolbar</item>
-        <item name="android:windowBackground">@color/white</item>
-        <item name="android:statusBarColor">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/white</item>
-        <item name="android:windowLightNavigationBar">true</item>
-    </style>
-
     <style name="AppTheme.PopupTheme" parent="ThemeOverlay.MaterialComponents.Light" />
 
     <style name="Widget.Toolbar" parent="Widget.AppCompat.Toolbar">

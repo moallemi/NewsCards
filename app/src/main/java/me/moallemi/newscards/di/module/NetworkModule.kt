@@ -37,7 +37,10 @@ class NetworkModule {
         }
 
     @Provides
-    fun provideOkHttpClient(urlInterceptor: Interceptor, httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+    fun provideOkHttpClient(
+        urlInterceptor: Interceptor,
+        httpLoggingInterceptor: HttpLoggingInterceptor
+    ): OkHttpClient {
         return OkHttpClient.Builder()
             .readTimeout(60, TimeUnit.SECONDS)
             .writeTimeout(60, TimeUnit.SECONDS)
@@ -56,7 +59,10 @@ class NetworkModule {
     }
 
     @Provides
-    fun provideRetrofit(okHttpClient: OkHttpClient, gsonConverterFactory: GsonConverterFactory): Retrofit {
+    fun provideRetrofit(
+        okHttpClient: OkHttpClient,
+        gsonConverterFactory: GsonConverterFactory
+    ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(NewsApiService.ENDPOINT)
             .client(okHttpClient)

@@ -10,20 +10,25 @@ import me.moallemi.newscards.ui.base.listener.TryAgainClickListener
 import me.moallemi.newscards.ui.base.recycler.loadmore.MoreItem
 import me.moallemi.newscards.ui.base.recycler.loadmore.MoreViewHolder
 
-abstract class BaseRecyclerAdapter<T : RecyclerData> : RecyclerView.Adapter<BaseRecyclerViewHolder<T>>() {
+abstract class BaseRecyclerAdapter<T : RecyclerData> :
+    RecyclerView.Adapter<BaseRecyclerViewHolder<T>>() {
 
     var itemClickListener: OnRecyclerItemClickListener<T>? = null
     var tryAgainListener: TryAgainClickListener? = null
 
     var items: MutableList<T> = mutableListOf()
 
-    protected abstract fun makeViewHolder(parent: ViewGroup, viewType: Int): BaseRecyclerViewHolder<T>?
+    protected abstract fun makeViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): BaseRecyclerViewHolder<T>?
 
     @Suppress("UNCHECKED_CAST")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseRecyclerViewHolder<T> {
         return when (viewType) {
             MoreItem.VIEW_TYPE -> {
-                val view = ItemLoadMoreBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                val view =
+                    ItemLoadMoreBinding.inflate(LayoutInflater.from(parent.context), parent, false)
                 MoreViewHolder(view, tryAgainListener) as BaseRecyclerViewHolder<T>
             }
             else -> {
