@@ -105,9 +105,9 @@ if your change is substantial, please raise an issue first to discuss it.
 
 ### TODO:
 
-- [*] update project dependencies
-- [*] add dark theme support
-- [*] use custom fonts
+- [x] update project dependencies
+- [x] add dark theme support
+- [x] use custom fonts
 - [ ] add news detail page
 - [ ] provide better caching mechanism
 - [ ] prevent reloading after changing UI mode
